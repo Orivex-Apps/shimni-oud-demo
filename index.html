@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شمني عود | عبق الفخامة وأصالة العود في الجبيل</title>
+<meta name="description" content="شمني عود — متجر عود وعطور وبخور في الجبيل. نسخة معاينة أولية.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9A449;
+  --gold-deep:#A98427;
+  --gold-soft:#E6D29A;
+  --charcoal:#3A3A3A;
+  --white:#FFFFFF;
+  --cream:#F9F8F6;
+  --radius:18px;
+  --shadow:0 12px 34px rgba(58,58,58,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"Cairo",system-ui,sans-serif;
+  background:var(--white);
+  color:var(--charcoal);
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,100% - 32px);margin-inline:auto}
+
+/* ---------- Protection banner ---------- */
+.preview-bar{
+  position:sticky;top:0;z-index:1000;
+  background:var(--gold);
+  color:var(--charcoal);
+  font-weight:800;
+  text-align:center;
+  padding:9px 16px;
+  font-size:.95rem;
+  line-height:1.6;
+  box-shadow:0 2px 10px rgba(0,0,0,.12);
+}
+
+/* ---------- Header ---------- */
+.site-header{
+  background:var(--white);
+  border-bottom:1px solid rgba(201,164,73,.35);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:14px 0;
+}
+.brand{display:flex;align-items:center;gap:14px}
+.brand .logo-wrap{width:88px;height:90px;flex:none}
+.logo-wrap svg{width:100%;height:100%}
+.brand-title{font-size:1.7rem;font-weight:800;color:var(--charcoal);line-height:1.2}
+.brand-title small{display:block;font-size:.72rem;font-weight:600;letter-spacing:.28em;color:var(--gold-deep);direction:ltr;text-align:right}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  font-family:inherit;font-weight:700;font-size:1rem;
+  padding:12px 26px;border-radius:999px;cursor:pointer;
+  border:1.5px solid var(--gold);transition:.25s ease;
+}
+.btn-outline{background:transparent;color:var(--charcoal)}
+.btn-outline:hover{background:var(--gold);color:var(--white)}
+.btn-gold{background:var(--gold);color:var(--white);box-shadow:0 8px 22px rgba(201,164,73,.35)}
+.btn-gold:hover{background:var(--gold-deep);border-color:var(--gold-deep);transform:translateY(-2px)}
+.btn-dark{background:var(--charcoal);border-color:var(--charcoal);color:var(--white);width:100%}
+.btn-dark:hover{background:var(--gold);border-color:var(--gold)}
+.btn svg{width:20px;height:20px;flex:none}
+
+/* ---------- Hero ---------- */
+.hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(900px 420px at 85% -10%,rgba(201,164,73,.18),transparent 60%),
+    radial-gradient(700px 380px at 5% 110%,rgba(201,164,73,.14),transparent 60%),
+    var(--cream);
+  padding:clamp(56px,9vw,110px) 0;
+  text-align:center;
+}
+.hero-frame{
+  position:relative;
+  width:min(920px,100%);
+  margin-inline:auto;
+  padding:clamp(34px,6vw,64px) clamp(20px,5vw,60px);
+  border:1.5px solid var(--gold);
+  border-radius:28px;
+  background:rgba(255,255,255,.7);
+  backdrop-filter:blur(4px);
+}
+.hero-frame::before{
+  content:"";position:absolute;inset:10px;
+  border:1px solid rgba(201,164,73,.45);
+  border-radius:20px;pointer-events:none;
+}
+.hero-mark{width:76px;height:82px;margin:0 auto 18px}
+.hero h1{
+  font-size:clamp(2rem,5.2vw,3.5rem);
+  font-weight:800;line-height:1.4;color:var(--charcoal);
+}
+.hero h1 span{color:var(--gold-deep)}
+.divider{
+  display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto;
+}
+.divider i{display:block;height:1.5px;width:70px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.divider b{width:9px;height:9px;background:var(--gold);transform:rotate(45deg)}
+.hero p{
+  max-width:680px;margin:0 auto 30px;
+  font-size:clamp(1rem,2.2vw,1.2rem);color:#555;
+}
+
+/* ---------- Sections ---------- */
+section{scroll-margin-top:20px}
+.section{padding:clamp(56px,8vw,96px) 0}
+.section.alt{background:var(--cream)}
+.section-head{text-align:center;margin-bottom:46px}
+.section-head h2{font-size:clamp(1.7rem,4vw,2.4rem);font-weight:800}
+.section-head p{color:#666;max-width:560px;margin:6px auto 0}
+
+/* ---------- Products ---------- */
+.grid-4{
+  display:grid;gap:24px;
+  grid-template-columns:repeat(auto-fill,minmax(250px,1fr));
+}
+.card{
+  background:var(--cream);
+  border:1px solid rgba(201,164,73,.35);
+  border-radius:var(--radius);
+  overflow:hidden;
+  display:flex;flex-direction:column;
+  transition:.3s ease;
+  box-shadow:var(--shadow);
+}
+.card:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 18px 44px rgba(201,164,73,.22)}
+.card-media{
+  aspect-ratio:4/3.2;
+  background:linear-gradient(160deg,#fff,#f1ece0);
+  display:grid;place-items:center;
+  border-bottom:1px solid rgba(201,164,73,.3);
+  overflow:hidden;
+}
+.card-media svg{width:78%;height:auto}
+.card-body{padding:22px 20px 22px;display:flex;flex-direction:column;gap:12px;flex:1}
+.card-body h3{font-size:1.2rem;font-weight:800;line-height:1.5}
+.card-body p{color:#5c5c5c;font-size:.95rem;flex:1}
+.price-tag{
+  align-self:flex-start;
+  background:var(--white);
+  border:1px dashed var(--gold);
+  color:var(--gold-deep);
+  font-weight:700;font-size:.88rem;
+  padding:4px 14px;border-radius:999px;
+}
+
+/* ---------- Branches ---------- */
+.grid-2{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));max-width:900px;margin-inline:auto}
+.branch{
+  position:relative;
+  background:var(--white);
+  border:2px solid var(--gold);
+  border-radius:var(--radius);
+  padding:34px 28px;text-align:center;
+  box-shadow:var(--shadow);
+}
+.branch::after{
+  content:"";position:absolute;inset:8px;border:1px solid rgba(201,164,73,.4);border-radius:12px;pointer-events:none;
+}
+.pin{
+  width:54px;height:54px;margin:0 auto 14px;border-radius:50%;
+  background:var(--gold);color:var(--white);display:grid;place-items:center;
+}
+.pin svg{width:26px;height:26px}
+.branch h3{font-size:1.35rem;font-weight:800;margin-bottom:4px}
+.branch p{color:#5c5c5c}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--charcoal);color:#e9e6dd;padding:48px 0 26px;text-align:center}
+.footer-logo{display:flex;flex-direction:column;align-items:center;gap:8px;margin-bottom:18px}
+.footer-logo .logo-wrap{width:112px;height:114px;background:var(--white);border-radius:14px;padding:8px}
+.footer-logo strong{font-size:1.4rem;color:var(--white)}
+.footer-ig{
+  display:inline-flex;align-items:center;gap:10px;color:var(--gold);font-weight:700;
+  direction:ltr;padding:8px 20px;border:1px solid rgba(201,164,73,.5);border-radius:999px;transition:.25s;
+}
+.footer-ig:hover{background:var(--gold);color:var(--charcoal)}
+.footer-ig svg{width:20px;height:20px}
+.copyright{
+  margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);
+  font-size:.88rem;color:#bdb9ad;
+}
+
+/* ---------- Modal ---------- */
+.modal{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(40,40,40,.62);
+  display:none;align-items:center;justify-content:center;padding:20px;
+}
+.modal.open{display:flex;animation:fade .2s ease}
+.modal-box{
+  position:relative;
+  background:var(--white);
+  border:2px solid var(--gold);
+  border-radius:22px;
+  width:min(460px,100%);
+  padding:38px 28px 28px;text-align:center;
+  box-shadow:0 24px 70px rgba(0,0,0,.35);
+}
+.modal-box .icon{
+  width:60px;height:60px;border-radius:50%;background:var(--cream);border:1.5px solid var(--gold);
+  display:grid;place-items:center;margin:0 auto 16px;color:var(--gold-deep);font-size:1.6rem;
+}
+.modal-box p{font-size:1.05rem;font-weight:600;margin-bottom:24px}
+.modal-close{
+  position:absolute;top:12px;inset-inline-start:14px;
+  background:none;border:none;font-size:1.7rem;line-height:1;color:var(--charcoal);cursor:pointer;
+}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+
+@media (max-width:640px){
+  .header-inner{flex-direction:column;align-items:stretch}
+  .brand{justify-content:center}
+  .btn-outline{width:100%}
+  .preview-bar{font-size:.82rem}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<!-- Reusable symbols: SHIMNI logo (traced from the supplied logo), icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="logo-mark" viewBox="295 100 430 465">
+      <path d="M695 312 V145 H560 V272 L460 262 V127 C385 127 327 170 327 235 C327 295 375 333 435 338 L595 345 C660 350 696 395 696 447 C696 505 640 548 562 548 V410 L463 400 V525 H328 V358" fill="none" stroke="#C9A449" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+    </symbol>
+    <symbol id="logo-full" viewBox="100 95 825 840">
+      <path d="M695 312 V145 H560 V272 L460 262 V127 C385 127 327 170 327 235 C327 295 375 333 435 338 L595 345 C660 350 696 395 696 447 C696 505 640 548 562 548 V410 L463 400 V525 H328 V358" fill="none" stroke="#C9A449" stroke-width="32" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="512" y="778" text-anchor="middle" direction="ltr" font-family="Montserrat,'Helvetica Neue',Arial,sans-serif" font-weight="600" font-size="214" fill="#505050" textLength="775" lengthAdjust="spacingAndGlyphs">SHIMNI</text>
+      <text x="512" y="912" text-anchor="middle" direction="ltr" font-family="Montserrat,'Helvetica Neue',Arial,sans-serif" font-weight="500" font-size="107" fill="#505050" textLength="525" lengthAdjust="spacingAndGlyphs">FOR OUD</text>
+    </symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.3" cy="6.7" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="wa" viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.7 13.6L3 21l4.5-1.2A9 9 0 1 0 12 3Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 8.5c.3 3 2.5 5.4 5.6 6.2l1.4-1.3-1.9-1-.9.7c-.9-.4-1.8-1.3-2.2-2.2l.7-.9-1-1.9L9 8.5Z" fill="currentColor"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></symbol>
+  </defs>
+</svg>
+
+<!-- 1. Sticky protection banner -->
+<div class="preview-bar" role="note">⚠️ نسخة معاينة أولية مصممة خصيصاً لمتجر شمني عود — للتفعيل الكامل وإضافة الأسعار تواصل مع فريق Orivex</div>
+
+<!-- 2. Header -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="#top" aria-label="شمني عود">
+      <span class="logo-wrap">
+        <svg role="img" aria-label="شعار شمني عود SHIMNI FOR OUD"><use href="#logo-full"/></svg>
+      </span>
+      <span class="brand-title">شمني عود</span>
+    </a>
+    <a class="btn btn-outline" href="https://instagram.com" target="_blank" rel="noopener">
+      <svg><use href="#ig"/></svg> حسابنا على إنستغرام
+    </a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- 3. Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-frame">
+      <svg class="hero-mark" aria-hidden="true"><use href="#logo-mark"/></svg>
+      <h1>عبق الفخامة وأصالة <span>العود</span> في الجبيل</h1>
+      <div class="divider"><i></i><b></b><i></i></div>
+      <p>واجهتكم الرقمية الرسمية المصممة لعملاء خرائط جوجل ورابط البايو في إنستغرام، لتصفح تشكيلتنا وطلبها بضغطة زر.</p>
+      <a class="btn btn-gold" href="#products" id="heroCta">استكشف أبرز المنتجات</a>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Products -->
+<section class="section" id="products">
+  <div class="container">
+    <div class="section-head">
+      <h2>أبرز المنتجات</h2>
+      <div class="divider"><i></i><b></b><i></i></div>
+    </div>
+    <div class="grid-4">
+
+      <article class="card">
+        <div class="card-media">
+          <svg viewBox="0 0 240 180" role="img" aria-label="كسر عود">
+            <ellipse cx="120" cy="158" rx="88" ry="10" fill="#3A3A3A" opacity=".08"/>
+            <g stroke="#2d2118" stroke-width="1.5" stroke-linejoin="round">
+              <path d="M40 120 L78 62 L96 70 L82 124 Z" fill="#6b4a2c"/>
+              <path d="M84 126 L112 52 L132 58 L128 128 Z" fill="#4a3220"/>
+              <path d="M128 128 L150 70 L184 84 L172 130 Z" fill="#7a5532"/>
+              <path d="M62 138 L96 98 L140 108 L134 142 Z" fill="#3a271a"/>
+              <path d="M150 140 L176 100 L206 118 L194 144 Z" fill="#5b3d24"/>
+            </g>
+            <g stroke="#C9A449" stroke-width="1.2" opacity=".6" fill="none"><path d="M90 64 L100 118"/><path d="M118 60 L124 120"/><path d="M160 80 L168 124"/></g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>عود مروكي محسن فاخر</h3>
+          <span class="price-tag">السعر: يُحدد عند التفعيل</span>
+          <p>كسر عود مختارة بعناية برائحة بخورية أصيلة وثبات عالٍ للمجالس والمناسبات.</p>
+          <button class="btn btn-dark order-btn" type="button"><svg><use href="#wa"/></svg> اطلب عبر واتساب</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <svg viewBox="0 0 240 180" role="img" aria-label="زجاجة عطر زيتي">
+            <ellipse cx="120" cy="160" rx="60" ry="9" fill="#3A3A3A" opacity=".1"/>
+            <rect x="96" y="30" width="48" height="26" rx="5" fill="#C9A449"/>
+            <rect x="106" y="22" width="28" height="10" rx="3" fill="#A98427"/>
+            <rect x="88" y="56" width="64" height="96" rx="14" fill="#fff" stroke="#C9A449" stroke-width="2"/>
+            <rect x="96" y="82" width="48" height="62" rx="8" fill="#5a1a14"/>
+            <rect x="100" y="86" width="9" height="54" rx="4" fill="#fff" opacity=".18"/>
+            <path d="M120 96 l6 10 -6 10 -6 -10z" fill="#C9A449"/>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>تركيبات عطور شمني الخاصة</h3>
+          <span class="price-tag">السعر: يُحدد عند التفعيل</span>
+          <p>عطور زيتية مركزة مستوحاة من أرقى الروائح الشرقية والفرنسية بثبات يدوم طويلاً.</p>
+          <button class="btn btn-dark order-btn" type="button"><svg><use href="#wa"/></svg> اطلب عبر واتساب</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <svg viewBox="0 0 240 180" role="img" aria-label="مبخرة وبخور">
+            <ellipse cx="120" cy="160" rx="70" ry="9" fill="#3A3A3A" opacity=".1"/>
+            <path d="M70 110 h100 q-6 40 -50 40 q-44 0 -50 -40z" fill="#3A3A3A"/>
+            <rect x="64" y="104" width="112" height="9" rx="4" fill="#C9A449"/>
+            <path d="M92 150 h56" stroke="#C9A449" stroke-width="3"/>
+            <ellipse cx="120" cy="100" rx="22" ry="8" fill="#2a1b12"/>
+            <g fill="none" stroke="#C9A449" stroke-width="3" stroke-linecap="round" opacity=".85">
+              <path d="M112 92 q-14 -16 0 -30 q14 -14 0 -30"/>
+              <path d="M128 92 q-12 -14 2 -26 q12 -12 0 -24" opacity=".6"/>
+            </g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>معمول وبخور ملكي</h3>
+          <span class="price-tag">السعر: يُحدد عند التفعيل</span>
+          <p>تشكيلة مميزة من البخور والمعمول المشرب بأجود الزيوت العطرية لتعطير الأجواء.</p>
+          <button class="btn btn-dark order-btn" type="button"><svg><use href="#wa"/></svg> اطلب عبر واتساب</button>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="card-media">
+          <svg viewBox="0 0 240 180" role="img" aria-label="معطر رش">
+            <ellipse cx="120" cy="160" rx="54" ry="9" fill="#3A3A3A" opacity=".1"/>
+            <rect x="100" y="22" width="40" height="16" rx="4" fill="#3A3A3A"/>
+            <path d="M140 28 h22 v8 h-22z" fill="#C9A449"/>
+            <rect x="112" y="38" width="16" height="16" fill="#C9A449"/>
+            <rect x="82" y="54" width="76" height="102" rx="16" fill="#fff" stroke="#C9A449" stroke-width="2"/>
+            <rect x="82" y="92" width="76" height="46" fill="#F9F8F6" stroke="#C9A449" stroke-width="1"/>
+            <text x="120" y="120" text-anchor="middle" font-family="Cairo,sans-serif" font-size="15" font-weight="800" fill="#3A3A3A">شمني</text>
+            <g stroke="#C9A449" stroke-width="2" stroke-linecap="round" opacity=".7"><path d="M170 30l14-6"/><path d="M172 40l18 0"/><path d="M170 50l14 6"/></g>
+          </svg>
+        </div>
+        <div class="card-body">
+          <h3>معطرات المفارش والمنزل</h3>
+          <span class="price-tag">السعر: يُحدد عند التفعيل</span>
+          <p>رشوش ومعطرات بأحجام متنوعة تضفي لمسة من الانتعاش والفخامة على منزلك.</p>
+          <button class="btn btn-dark order-btn" type="button"><svg><use href="#wa"/></svg> اطلب عبر واتساب</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- 5. Branches -->
+<section class="section alt" id="branches">
+  <div class="container">
+    <div class="section-head">
+      <h2>فروعنا في الجبيل</h2>
+      <div class="divider"><i></i><b></b><i></i></div>
+    </div>
+    <div class="grid-2">
+      <div class="branch">
+        <div class="pin"><svg><use href="#pin"/></svg></div>
+        <h3>فرع الجبيل البلد</h3>
+        <p>شارع القطيف — الجبيل البلد</p>
+      </div>
+      <div class="branch">
+        <div class="pin"><svg><use href="#pin"/></svg></div>
+        <h3>فرع الجبيل الصناعية</h3>
+        <p>حي جلمودة — الجبيل الصناعية</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- 6. Footer -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-logo">
+      <span class="logo-wrap">
+        <svg role="img" aria-label="شعار شمني عود SHIMNI FOR OUD"><use href="#logo-full"/></svg>
+      </span>
+      <strong>شمني عود</strong>
+    </div>
+    <a class="footer-ig" href="https://instagram.com" target="_blank" rel="noopener">
+      <svg><use href="#ig"/></svg> إنستغرام
+    </a>
+    <p class="copyright">جميع الحقوق محفوظة لمتجر شمني عود © 2026 | نموذج معاينة بواسطة فريق Orivex</p>
+  </div>
+</footer>
+
+<!-- Preview modal -->
+<div class="modal" id="previewModal" role="dialog" aria-modal="true" aria-labelledby="modalText">
+  <div class="modal-box">
+    <button class="modal-close" type="button" id="modalX" aria-label="إغلاق">×</button>
+    <div class="icon">⚠️</div>
+    <p id="modalText">هذه نسخة معاينة تجريبية من تصميم Orivex. عند التفعيل الرسمي سيتم ربط هذا الزر برقم واتساب المتجر مباشرة.</p>
+    <button class="btn btn-gold" type="button" id="modalOk">حسناً</button>
+  </div>
+</div>
+
+<script>
+(function(){
+  var modal=document.getElementById('previewModal');
+  function open(){modal.classList.add('open');document.getElementById('modalOk').focus();}
+  function close(){modal.classList.remove('open');}
+  document.querySelectorAll('.order-btn').forEach(function(b){
+    b.addEventListener('click',function(e){e.preventDefault();open();});
+  });
+  document.getElementById('modalOk').addEventListener('click',close);
+  document.getElementById('modalX').addEventListener('click',close);
+  modal.addEventListener('click',function(e){if(e.target===modal)close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+})();
+</script>
+</body>
+</html>
